@@ -1,12 +1,15 @@
 {
-  "name": "goa-rentals-dashboard",
-  "version": "1.0.0",
-  "description": "GOA Rentals MarOS Management Dashboard",
-  "private": true,
-  "scripts": {
-    "start": "echo \"No start script needed for static deployment.\"",
-    "build": "echo \"No build script needed for static deployment.\""
-  },
-  "author": "",
-  "license": "ISC"
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
